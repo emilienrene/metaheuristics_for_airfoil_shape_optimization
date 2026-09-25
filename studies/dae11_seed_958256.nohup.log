@@ -1,0 +1,66 @@
+Drela DAE-11 one-point 5x5 study
+Results root         : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958256
+Seed                 : 958256
+Baseline             : /home/erene/simulations/rAIFoil/DAE11.dat
+Inverse selections   : /home/erene/simulations/rAIFoil/optimizer/dae11_inverse/selected_methods.csv
+AoA sweep            : 2 to 10 (20 samples)
+Mach / Reynolds      : 0.2 / 500000
+Target Cl            : 1.25
+Constraints          : CMZ=0.053639, TE=6.25 deg, LE mismatch=0, t33=0.128, t90=0.014
+CL envelope          : 1.25 +/- 0.02
+Active constraints   : te_angle,t90,t33,le_mismatch,cm
+Constraint treatment : deb
+Constraint scales    : CM=0.02 t33=0.0004 t90=0.0004 TE=1.0 LE=0.005
+Generations / pop.   : 500 / 100
+WARNING: selected parsec inverse fit did not pass Kulfan tolerance; using the built-in reference instead.
+
+============================================================
+Method    : parsec
+Optimizer : ga
+Setup     : fixed
+n_genes   : 11
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958256/matrix_5x5_1point/logs/parsec__ga.log
+============================================================
+Completed: parsec__ga  final_best=0.0577591756783134
+WARNING: selected parsec inverse fit did not pass Kulfan tolerance; using the built-in reference instead.
+
+============================================================
+Method    : parsec
+Optimizer : pso
+Setup     : fixed
+n_genes   : 11
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958256/matrix_5x5_1point/logs/parsec__pso.log
+PSO       : omega_max=default omega_min=default c1=default c2=default
+============================================================
+Completed: parsec__pso  final_best=0.0525026954389406
+WARNING: selected parsec inverse fit did not pass Kulfan tolerance; using the built-in reference instead.
+
+============================================================
+Method    : parsec
+Optimizer : de
+Setup     : fixed
+n_genes   : 11
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958256/matrix_5x5_1point/logs/parsec__de.log
+============================================================
+Completed: parsec__de  final_best=0.0577591756783134
+WARNING: selected parsec inverse fit did not pass Kulfan tolerance; using the built-in reference instead.
+
+============================================================
+Method    : parsec
+Optimizer : cmaes
+Setup     : fixed
+n_genes   : 11
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958256/matrix_5x5_1point/logs/parsec__cmaes.log
+CMAES     : sigma=0.30 mu=0 cm=1.0 elitism=0 max_resample=100
+============================================================
+Completed: parsec__cmaes  final_best=0.0357298924462044
+WARNING: selected parsec inverse fit did not pass Kulfan tolerance; using the built-in reference instead.
+
+============================================================
+Method    : parsec
+Optimizer : abc
+Setup     : fixed
+n_genes   : 11
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958256/matrix_5x5_1point/logs/parsec__abc.log
+ABC       : mr=0.0 employed_fraction=0.5 elitism=1 scout_period=0 scout_count=1
+============================================================

@@ -1,0 +1,514 @@
+Drela DAE-11 constrained vs. CL-only 5x5 study
+Results root         : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258
+Seed                 : 958258
+Baseline             : /home/erene/simulations/rAIFoil/DAE11.dat
+Inverse selections   : /home/erene/simulations/rAIFoil/optimizer/dae11_inverse/selected_methods.csv
+AoA sweep            : 2 to 10 (30 samples)
+Mach / Reynolds      : 0.2 / 500000
+Target Cl            : 1.25
+Generations / pop.   : 500 / 100
+Constrained case: /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/constrained
+  DAE-11 constraints: te_angle,t90,t33,le_mismatch,cm (deb)
+  CL envelope: 1.25 +/- 0.02
+  Scales: CM=0.02 t33=0.0004 t90=0.0004 TE=1.0 LE=0.005
+WARNING: selected parsec inverse fit did not pass Kulfan tolerance; using the built-in reference instead.
+
+============================================================
+Method    : parsec
+Optimizer : ga
+Setup     : fixed
+n_genes   : 11
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/constrained/logs/parsec__ga.log
+============================================================
+Completed: parsec__ga  final_best=0.0577611036195883
+WARNING: selected parsec inverse fit did not pass Kulfan tolerance; using the built-in reference instead.
+
+============================================================
+Method    : parsec
+Optimizer : pso
+Setup     : fixed
+n_genes   : 11
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/constrained/logs/parsec__pso.log
+PSO       : omega_max=default omega_min=default c1=default c2=default
+============================================================
+Completed: parsec__pso  final_best=0.0585666718687475
+WARNING: selected parsec inverse fit did not pass Kulfan tolerance; using the built-in reference instead.
+
+============================================================
+Method    : parsec
+Optimizer : de
+Setup     : fixed
+n_genes   : 11
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/constrained/logs/parsec__de.log
+============================================================
+Completed: parsec__de  final_best=0.0577611036195883
+WARNING: selected parsec inverse fit did not pass Kulfan tolerance; using the built-in reference instead.
+
+============================================================
+Method    : parsec
+Optimizer : cmaes
+Setup     : fixed
+n_genes   : 11
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/constrained/logs/parsec__cmaes.log
+CMAES     : sigma=0.30 mu=0 cm=1.0 elitism=0 max_resample=100
+============================================================
+Completed: parsec__cmaes  final_best=0.0356882466453674
+WARNING: selected parsec inverse fit did not pass Kulfan tolerance; using the built-in reference instead.
+
+============================================================
+Method    : parsec
+Optimizer : abc
+Setup     : fixed
+n_genes   : 11
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/constrained/logs/parsec__abc.log
+ABC       : mr=0.0 employed_fraction=0.5 elitism=1 scout_period=0 scout_count=1
+============================================================
+Completed: parsec__abc  final_best=0.0577570367278798
+
+============================================================
+Method    : cst
+Optimizer : ga
+Setup     : CST_ORDER=7
+n_genes   : 19
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/constrained/logs/cst__ga.log
+============================================================
+Completed: cst__ga  final_best=0.0504805094625283
+
+============================================================
+Method    : cst
+Optimizer : pso
+Setup     : CST_ORDER=7
+n_genes   : 19
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/constrained/logs/cst__pso.log
+PSO       : omega_max=default omega_min=default c1=default c2=default
+============================================================
+Completed: cst__pso  final_best=0.0362042996768982
+
+============================================================
+Method    : cst
+Optimizer : de
+Setup     : CST_ORDER=7
+n_genes   : 19
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/constrained/logs/cst__de.log
+============================================================
+Completed: cst__de  final_best=0.0504805094625283
+
+============================================================
+Method    : cst
+Optimizer : cmaes
+Setup     : CST_ORDER=7
+n_genes   : 19
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/constrained/logs/cst__cmaes.log
+CMAES     : sigma=0.30 mu=0 cm=1.0 elitism=0 max_resample=100
+============================================================
+Completed: cst__cmaes  final_best=0.0301077284408329
+
+============================================================
+Method    : cst
+Optimizer : abc
+Setup     : CST_ORDER=7
+n_genes   : 19
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/constrained/logs/cst__abc.log
+ABC       : mr=0.0 employed_fraction=0.5 elitism=1 scout_period=0 scout_count=1
+============================================================
+Completed: cst__abc  final_best=0.0499886873037236
+
+============================================================
+Method    : bspline
+Optimizer : ga
+Setup     : BSPLINE_N_CTRL=8
+n_genes   : 12
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/constrained/logs/bspline__ga.log
+============================================================
+Completed: bspline__ga  final_best=0.0584965169243627
+
+============================================================
+Method    : bspline
+Optimizer : pso
+Setup     : BSPLINE_N_CTRL=8
+n_genes   : 12
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/constrained/logs/bspline__pso.log
+PSO       : omega_max=default omega_min=default c1=default c2=default
+============================================================
+Completed: bspline__pso  final_best=0.0416731722239216
+
+============================================================
+Method    : bspline
+Optimizer : de
+Setup     : BSPLINE_N_CTRL=8
+n_genes   : 12
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/constrained/logs/bspline__de.log
+============================================================
+Completed: bspline__de  final_best=0.050498
+
+============================================================
+Method    : bspline
+Optimizer : cmaes
+Setup     : BSPLINE_N_CTRL=8
+n_genes   : 12
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/constrained/logs/bspline__cmaes.log
+CMAES     : sigma=0.30 mu=0 cm=1.0 elitism=0 max_resample=100
+============================================================
+Completed: bspline__cmaes  final_best=0.0354935042672655
+
+============================================================
+Method    : bspline
+Optimizer : abc
+Setup     : BSPLINE_N_CTRL=8
+n_genes   : 12
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/constrained/logs/bspline__abc.log
+ABC       : mr=0.0 employed_fraction=0.5 elitism=1 scout_period=0 scout_count=1
+============================================================
+Completed: bspline__abc  final_best=0.0505703561776061
+
+============================================================
+Method    : hickshenne
+Optimizer : ga
+Setup     : HH_N_BUMPS=9
+n_genes   : 18
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/constrained/logs/hickshenne__ga.log
+============================================================
+Completed: hickshenne__ga  final_best=0.0505274959677419
+
+============================================================
+Method    : hickshenne
+Optimizer : pso
+Setup     : HH_N_BUMPS=9
+n_genes   : 18
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/constrained/logs/hickshenne__pso.log
+PSO       : omega_max=default omega_min=default c1=default c2=default
+============================================================
+Completed: hickshenne__pso  final_best=0.0480396820008035
+
+============================================================
+Method    : hickshenne
+Optimizer : de
+Setup     : HH_N_BUMPS=9
+n_genes   : 18
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/constrained/logs/hickshenne__de.log
+============================================================
+Completed: hickshenne__de  final_best=0.0505274959677419
+
+============================================================
+Method    : hickshenne
+Optimizer : cmaes
+Setup     : HH_N_BUMPS=9
+n_genes   : 18
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/constrained/logs/hickshenne__cmaes.log
+CMAES     : sigma=0.30 mu=0 cm=1.0 elitism=0 max_resample=100
+============================================================
+Completed: hickshenne__cmaes  final_best=0.0179365045398497
+
+============================================================
+Method    : hickshenne
+Optimizer : abc
+Setup     : HH_N_BUMPS=9
+n_genes   : 18
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/constrained/logs/hickshenne__abc.log
+ABC       : mr=0.0 employed_fraction=0.5 elitism=1 scout_period=0 scout_count=1
+============================================================
+Completed: hickshenne__abc  final_best=0.0502347323717948
+
+============================================================
+Method    : ffd
+Optimizer : ga
+Setup     : FFD_PIN_MODE=corners;FFD_N_ROWS=4;FFD_M=6
+n_genes   : 24
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/constrained/logs/ffd__ga.log
+============================================================
+Completed: ffd__ga  final_best=0.0505274959677419
+
+============================================================
+Method    : ffd
+Optimizer : pso
+Setup     : FFD_PIN_MODE=corners;FFD_N_ROWS=4;FFD_M=6
+n_genes   : 24
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/constrained/logs/ffd__pso.log
+PSO       : omega_max=default omega_min=default c1=default c2=default
+============================================================
+Completed: ffd__pso  final_best=0.0350327260319946
+
+============================================================
+Method    : ffd
+Optimizer : de
+Setup     : FFD_PIN_MODE=corners;FFD_N_ROWS=4;FFD_M=6
+n_genes   : 24
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/constrained/logs/ffd__de.log
+============================================================
+Completed: ffd__de  final_best=0.0505274959677419
+
+============================================================
+Method    : ffd
+Optimizer : cmaes
+Setup     : FFD_PIN_MODE=corners;FFD_N_ROWS=4;FFD_M=6
+n_genes   : 24
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/constrained/logs/ffd__cmaes.log
+CMAES     : sigma=0.30 mu=0 cm=1.0 elitism=0 max_resample=100
+============================================================
+Completed: ffd__cmaes  final_best=0.0187409630714015
+
+============================================================
+Method    : ffd
+Optimizer : abc
+Setup     : FFD_PIN_MODE=corners;FFD_N_ROWS=4;FFD_M=6
+n_genes   : 24
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/constrained/logs/ffd__abc.log
+ABC       : mr=0.0 employed_fraction=0.5 elitism=1 scout_period=0 scout_count=1
+============================================================
+Completed: ffd__abc  final_best=0.0456088139140271
+
+Matrix study complete.
+Results: /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/constrained
+Index  : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/constrained/study_index.csv
+Unconstrained case: /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/unconstrained
+  Constraint: CL=1.25 (exact interpolation)
+WARNING: selected parsec inverse fit did not pass Kulfan tolerance; using the built-in reference instead.
+
+============================================================
+Method    : parsec
+Optimizer : ga
+Setup     : fixed
+n_genes   : 11
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/unconstrained/logs/parsec__ga.log
+============================================================
+Completed: parsec__ga  final_best=0.0426937756494522
+WARNING: selected parsec inverse fit did not pass Kulfan tolerance; using the built-in reference instead.
+
+============================================================
+Method    : parsec
+Optimizer : pso
+Setup     : fixed
+n_genes   : 11
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/unconstrained/logs/parsec__pso.log
+PSO       : omega_max=default omega_min=default c1=default c2=default
+============================================================
+Completed: parsec__pso  final_best=0.0282369724409448
+WARNING: selected parsec inverse fit did not pass Kulfan tolerance; using the built-in reference instead.
+
+============================================================
+Method    : parsec
+Optimizer : de
+Setup     : fixed
+n_genes   : 11
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/unconstrained/logs/parsec__de.log
+============================================================
+Completed: parsec__de  final_best=0.0282299879478827
+WARNING: selected parsec inverse fit did not pass Kulfan tolerance; using the built-in reference instead.
+
+============================================================
+Method    : parsec
+Optimizer : cmaes
+Setup     : fixed
+n_genes   : 11
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/unconstrained/logs/parsec__cmaes.log
+CMAES     : sigma=0.30 mu=0 cm=1.0 elitism=0 max_resample=100
+============================================================
+Completed: parsec__cmaes  final_best=0.0279588098628691
+WARNING: selected parsec inverse fit did not pass Kulfan tolerance; using the built-in reference instead.
+
+============================================================
+Method    : parsec
+Optimizer : abc
+Setup     : fixed
+n_genes   : 11
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/unconstrained/logs/parsec__abc.log
+ABC       : mr=0.0 employed_fraction=0.5 elitism=1 scout_period=0 scout_count=1
+============================================================
+Completed: parsec__abc  final_best=0.0316884104215068
+
+============================================================
+Method    : cst
+Optimizer : ga
+Setup     : CST_ORDER=7
+n_genes   : 19
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/unconstrained/logs/cst__ga.log
+============================================================
+Completed: cst__ga  final_best=0.0236714256994908
+
+============================================================
+Method    : cst
+Optimizer : pso
+Setup     : CST_ORDER=7
+n_genes   : 19
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/unconstrained/logs/cst__pso.log
+PSO       : omega_max=default omega_min=default c1=default c2=default
+============================================================
+Completed: cst__pso  final_best=0.0243141264554436
+
+============================================================
+Method    : cst
+Optimizer : de
+Setup     : CST_ORDER=7
+n_genes   : 19
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/unconstrained/logs/cst__de.log
+============================================================
+Completed: cst__de  final_best=0.0243831636145024
+
+============================================================
+Method    : cst
+Optimizer : cmaes
+Setup     : CST_ORDER=7
+n_genes   : 19
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/unconstrained/logs/cst__cmaes.log
+CMAES     : sigma=0.30 mu=0 cm=1.0 elitism=0 max_resample=100
+============================================================
+Completed: cst__cmaes  final_best=0.0230419052326983
+
+============================================================
+Method    : cst
+Optimizer : abc
+Setup     : CST_ORDER=7
+n_genes   : 19
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/unconstrained/logs/cst__abc.log
+ABC       : mr=0.0 employed_fraction=0.5 elitism=1 scout_period=0 scout_count=1
+============================================================
+Completed: cst__abc  final_best=0.0254536108811066
+
+============================================================
+Method    : bspline
+Optimizer : ga
+Setup     : BSPLINE_N_CTRL=8
+n_genes   : 12
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/unconstrained/logs/bspline__ga.log
+============================================================
+Completed: bspline__ga  final_best=0.0267144164556333
+
+============================================================
+Method    : bspline
+Optimizer : pso
+Setup     : BSPLINE_N_CTRL=8
+n_genes   : 12
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/unconstrained/logs/bspline__pso.log
+PSO       : omega_max=default omega_min=default c1=default c2=default
+============================================================
+Completed: bspline__pso  final_best=0.0267099693214749
+
+============================================================
+Method    : bspline
+Optimizer : de
+Setup     : BSPLINE_N_CTRL=8
+n_genes   : 12
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/unconstrained/logs/bspline__de.log
+============================================================
+Completed: bspline__de  final_best=0.0267082223829235
+
+============================================================
+Method    : bspline
+Optimizer : cmaes
+Setup     : BSPLINE_N_CTRL=8
+n_genes   : 12
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/unconstrained/logs/bspline__cmaes.log
+CMAES     : sigma=0.30 mu=0 cm=1.0 elitism=0 max_resample=100
+============================================================
+Completed: bspline__cmaes  final_best=0.0276984748327029
+
+============================================================
+Method    : bspline
+Optimizer : abc
+Setup     : BSPLINE_N_CTRL=8
+n_genes   : 12
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/unconstrained/logs/bspline__abc.log
+ABC       : mr=0.0 employed_fraction=0.5 elitism=1 scout_period=0 scout_count=1
+============================================================
+Completed: bspline__abc  final_best=0.0269542868738863
+
+============================================================
+Method    : hickshenne
+Optimizer : ga
+Setup     : HH_N_BUMPS=9
+n_genes   : 18
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/unconstrained/logs/hickshenne__ga.log
+============================================================
+Completed: hickshenne__ga  final_best=0.0184222251978088
+
+============================================================
+Method    : hickshenne
+Optimizer : pso
+Setup     : HH_N_BUMPS=9
+n_genes   : 18
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/unconstrained/logs/hickshenne__pso.log
+PSO       : omega_max=default omega_min=default c1=default c2=default
+============================================================
+Completed: hickshenne__pso  final_best=0.0154604401508011
+
+============================================================
+Method    : hickshenne
+Optimizer : de
+Setup     : HH_N_BUMPS=9
+n_genes   : 18
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/unconstrained/logs/hickshenne__de.log
+============================================================
+Completed: hickshenne__de  final_best=0.0212797656529517
+
+============================================================
+Method    : hickshenne
+Optimizer : cmaes
+Setup     : HH_N_BUMPS=9
+n_genes   : 18
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/unconstrained/logs/hickshenne__cmaes.log
+CMAES     : sigma=0.30 mu=0 cm=1.0 elitism=0 max_resample=100
+============================================================
+Completed: hickshenne__cmaes  final_best=0.0136294759322784
+
+============================================================
+Method    : hickshenne
+Optimizer : abc
+Setup     : HH_N_BUMPS=9
+n_genes   : 18
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/unconstrained/logs/hickshenne__abc.log
+ABC       : mr=0.0 employed_fraction=0.5 elitism=1 scout_period=0 scout_count=1
+============================================================
+Completed: hickshenne__abc  final_best=0.024581043991315
+
+============================================================
+Method    : ffd
+Optimizer : ga
+Setup     : FFD_PIN_MODE=corners;FFD_N_ROWS=4;FFD_M=6
+n_genes   : 24
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/unconstrained/logs/ffd__ga.log
+============================================================
+Completed: ffd__ga  final_best=0.0171156345743808
+
+============================================================
+Method    : ffd
+Optimizer : pso
+Setup     : FFD_PIN_MODE=corners;FFD_N_ROWS=4;FFD_M=6
+n_genes   : 24
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/unconstrained/logs/ffd__pso.log
+PSO       : omega_max=default omega_min=default c1=default c2=default
+============================================================
+Completed: ffd__pso  final_best=0.015328
+
+============================================================
+Method    : ffd
+Optimizer : de
+Setup     : FFD_PIN_MODE=corners;FFD_N_ROWS=4;FFD_M=6
+n_genes   : 24
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/unconstrained/logs/ffd__de.log
+============================================================
+Completed: ffd__de  final_best=0.01788902781474
+
+============================================================
+Method    : ffd
+Optimizer : cmaes
+Setup     : FFD_PIN_MODE=corners;FFD_N_ROWS=4;FFD_M=6
+n_genes   : 24
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/unconstrained/logs/ffd__cmaes.log
+CMAES     : sigma=0.30 mu=0 cm=1.0 elitism=0 max_resample=100
+============================================================
+Completed: ffd__cmaes  final_best=0.0140596353333637
+
+============================================================
+Method    : ffd
+Optimizer : abc
+Setup     : FFD_PIN_MODE=corners;FFD_N_ROWS=4;FFD_M=6
+n_genes   : 24
+Log       : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/unconstrained/logs/ffd__abc.log
+ABC       : mr=0.0 employed_fraction=0.5 elitism=1 scout_period=0 scout_count=1
+============================================================
+Completed: ffd__abc  final_best=0.0184036774864551
+
+Matrix study complete.
+Results: /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/unconstrained
+Index  : /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258/unconstrained/study_index.csv
+Study complete: /home/erene/simulations/rAIFoil/optimizer/studies/dae11_seed_958258
