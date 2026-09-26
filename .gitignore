@@ -1,0 +1,5 @@
+/optimization_*/
+/studies/*/
+**/__pycache__/
+*.pyc
+*.log
