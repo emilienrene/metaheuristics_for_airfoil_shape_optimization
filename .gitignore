@@ -3,3 +3,4 @@
 **/__pycache__/
 *.pyc
 *.log
+/studies/point_studies_latest.txt
