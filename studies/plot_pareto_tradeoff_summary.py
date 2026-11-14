@@ -226,6 +226,9 @@ def load_pareto_data(
         "optimizer",
         "mean_iterations_to_converge",
         "std_iterations_to_converge",
+        "lognormal_median_iterations_to_converge",
+        "lognormal_lower_iterations_to_converge",
+        "lognormal_upper_iterations_to_converge",
         "n_converged",
         "n_completed_runs",
         "convergence_rate",
@@ -238,6 +241,11 @@ def load_pareto_data(
             messages.append(f"{performance_csv} missing columns: {', '.join(missing_perf)}")
         if missing_cauchy:
             messages.append(f"{cauchy_csv} missing columns: {', '.join(missing_cauchy)}")
+            if any(column.startswith("lognormal_") for column in missing_cauchy):
+                messages.append(
+                    "Regenerate the Cauchy CSV with the updated "
+                    "plot_seed_matrix_summary.py before plotting tradeoffs."
+                )
         raise SystemExit("\n".join(messages))
 
     for df in (perf, cauchy):
@@ -259,6 +267,9 @@ def load_pareto_data(
         "std_drag_reduction_percent",
         "mean_iterations_to_converge",
         "std_iterations_to_converge",
+        "lognormal_median_iterations_to_converge",
+        "lognormal_lower_iterations_to_converge",
+        "lognormal_upper_iterations_to_converge",
         "n_converged",
         "n_completed_runs",
         "convergence_rate",
@@ -269,7 +280,13 @@ def load_pareto_data(
     keep = (
         merged["n_points"].isin(POINT_COUNTS)
         & np.isfinite(merged["mean_drag_reduction_percent"])
-        & np.isfinite(merged["mean_iterations_to_converge"])
+        & np.isfinite(merged["lognormal_median_iterations_to_converge"])
+        & np.isfinite(merged["lognormal_lower_iterations_to_converge"])
+        & np.isfinite(merged["lognormal_upper_iterations_to_converge"])
+        & (merged["lognormal_lower_iterations_to_converge"]
+           <= merged["lognormal_median_iterations_to_converge"])
+        & (merged["lognormal_median_iterations_to_converge"]
+           <= merged["lognormal_upper_iterations_to_converge"])
     )
     merged = merged[keep].copy()
     merged["n_points"] = merged["n_points"].astype(int)
@@ -291,9 +308,11 @@ def plot_tradeoff(
                 continue
 
             row = rows.iloc[-1]
-            x = float(row["mean_iterations_to_converge"])
+            x = float(row["lognormal_median_iterations_to_converge"])
             y = float(row["mean_drag_reduction_percent"])
-            xerr = finite_or_none(row.get("std_iterations_to_converge"))
+            lower = float(row["lognormal_lower_iterations_to_converge"])
+            upper = float(row["lognormal_upper_iterations_to_converge"])
+            xerr = np.array([[x - lower], [upper - x]])
             yerr = finite_or_none(row.get("std_drag_reduction_percent"))
 
             if PARETO_SHOW_ERRORBARS:
@@ -336,7 +355,7 @@ def style_axis(
     df: pd.DataFrame,
     shared_ylim: tuple[float, float] | None,
 ) -> None:
-    ax.set_xlabel("Iterations to convergence", fontweight="bold", fontsize=PARETO_FONT_SIZE)
+    ax.set_xlabel("Median iterations to convergence", fontweight="bold", fontsize=PARETO_FONT_SIZE)
     ax.set_ylabel("Mean drag reduction (%)", fontweight="bold", fontsize=PARETO_FONT_SIZE)
 
     xlim = explicit_or_default_xlim(df)
@@ -361,12 +380,12 @@ def explicit_or_default_xlim(df: pd.DataFrame) -> tuple[float, float]:
     if XMIN.strip().lower() not in {"", "auto", "none"}:
         xmin = float(XMIN)
     else:
-        xmin = float(df["mean_iterations_to_converge"].min())
+        xmin = float(df["lognormal_lower_iterations_to_converge"].min())
 
     if XMAX.strip().lower() not in {"", "auto", "none"}:
         xmax = float(XMAX)
     else:
-        xmax = float(df["mean_iterations_to_converge"].max())
+        xmax = float(df["lognormal_upper_iterations_to_converge"].max())
 
     if np.isclose(xmin, xmax):
         pad = max(1.0, abs(xmin) * 0.05)
